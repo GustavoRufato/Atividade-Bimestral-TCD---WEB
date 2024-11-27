@@ -1,0 +1,32 @@
+{
+    "name": "portifolio",
+    "version": "1.0.0",
+    "description": "Art Portfolio of Gustavo Rufato",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "live-server --port=8080"
+    },
+    "keywords": [],
+    "author": "Gustavo Willian Rufato",
+    "license": "MIT",
+    "dependencies": {
+        "async": "^3.2.3",
+        "dotenv": "^16.4.5",
+        "ejs": "^3.1.10",
+        "express": "^4.21.1",
+        "request": "^2.88.2"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "nodemon": "^3.1.4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GustavoRufato/Atividade-Bimestral-TCD---WEB.git"
+    },
+    "bugs": {
+        "url": "https://github.com/GustavoRufato/Atividade-Bimestral-TCD---WEB/issues"
+    },
+    "homepage": "https://github.com/GustavoRufato/Atividade-Bimestral-TCD---WEB#readme"
+}

@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules/
+
+# config files
+package-lock.json
+.env
+
+# Other directories
+tmp
+
