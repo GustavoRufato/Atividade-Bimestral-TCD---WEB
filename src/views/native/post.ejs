@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria de Arte</title>
+  <title><%= illustration.titulo %></title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -27,35 +27,45 @@
       background-color: #f5f5f5;
     }
 
-    .gallery {
+    .illustration-container {
       display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .gallery-item {
-      background: white;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
       border: 1px solid #ddd;
       border-radius: 8px;
-      overflow: hidden;
+      padding: 2rem;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      padding: 1rem;
-      width: 200px;
-      cursor: pointer; 
-      text-decoration: none; 
-      color: inherit; 
     }
 
-    .gallery-item img {
-      width: 200px;
-      height: 200px;
+    .illustration-container img {
+      width: 300px;
+      height: 300px;
       object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
 
-    .gallery-item h3, .gallery-item p {
+    .illustration-container h1 {
       margin: 0.5rem 0;
+      font-size: 1.8rem;
+    }
+
+    .illustration-container p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .back-link {
+      margin-top: 1rem;
+      color: #007BFF;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -64,15 +74,12 @@
   <custom-header></custom-header>
 
   <main>
-    <section class="gallery">
-      <% illustrations.forEach(illustration => { %>
-        <a href="/gallery/post/<%= illustration.id %>" class="gallery-item">
-          <img src="<%= illustration.caminhoFoto %>" alt="<%= illustration.titulo %>">
-          <h3><span class="iconify" data-icon="mdi:image"></span> <%= illustration.titulo %></h3>
-          <p><%= illustration.descricao %></p>
-        </a>
-      <% }) %>
-    </section>
+    <div class="illustration-container">
+      <img src="<%= illustration.caminhoFoto %>" alt="<%= illustration.titulo %>">
+      <h1><%= illustration.titulo %></h1>
+      <p><%= illustration.descricao %></p>
+      <a href="/home" class="back-link">Voltar à Galeria</a>
+    </div>
   </main>
 
   <custom-footer></custom-footer>

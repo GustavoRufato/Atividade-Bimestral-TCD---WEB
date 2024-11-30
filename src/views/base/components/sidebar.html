@@ -1,0 +1,74 @@
+<style>
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 200px;
+      height: 100%;
+      background-color: #444;
+      color: white;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin: 1rem 0;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar a .iconify {
+      margin-right: 8px;
+    }
+
+    .menu-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .menu-btn .iconify {
+      font-size: 24px;
+    }
+</style>
+
+<button class="menu-btn" onclick="toggleSidebar()">
+  <span class="iconify" data-icon="mdi:menu"></span>
+</button>
+
+<div class="sidebar">
+  <h2>Menu</h2>
+  <nav>
+    <ul>
+      <li><a href="#"><span class="iconify" data-icon="mdi:home-outline"></span> Início</a></li>
+      <li><a href="#"><span class="iconify" data-icon="mdi:brush"></span> Exposições</a></li>
+      <li><a href="#"><span class="iconify" data-icon="mdi:account"></span> Artistas</a></li>
+      <li><a href="#"><span class="iconify" data-icon="mdi:email-outline"></span> Contato</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script src="/public/assets/js/components/sidebar.js"></script>
+

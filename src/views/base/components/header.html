@@ -1,0 +1,84 @@
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b1b1b;
+    padding: 1rem 2rem;
+    color: #a3b18a;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo span {
+    margin-right: 0.625rem; 
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    color: #a3b18a;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #d9f99d; 
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  @media (max-width: 48rem) {
+    nav ul {
+      display: none;
+    }
+
+    .menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      color: #a3b18a;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+  }
+</style>
+
+<header>
+  <div class="logo">
+    <span class="iconify" data-icon="mdi:leaf"></span> Portfólio
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()">
+    <span class="iconify" data-icon="mdi:menu"></span>
+  </button>
+  <nav>
+    <ul>
+      <li><a href="/home"><span class="iconify" data-icon="mdi:home"></span> Início</a></li>
+      <li><a href="#"><span class="iconify" data-icon="mdi:brush"></span> Projetos</a></li>
+      <li><a href="#"><span class="iconify" data-icon="mdi:account"></span> Sobre Mim</a></li>
+      <li><a href="#"><span class="iconify" data-icon="mdi:email-outline"></span> Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav ul');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>

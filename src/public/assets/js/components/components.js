@@ -1,10 +1,15 @@
+const base = [
+    // { tag: 'layout', file: '/views/base/components/layout.html' },
+    { tag: 'custom-header', file: '/views/base/components/header.html' },
+    { tag: 'custom-footer', file: '/views/base/components/footer.html' },
+    { tag: 'custom-sidebar', file: '/views/base/components/sidebar.html' },
+]
+
 const components = [
-    { tag: 'custom-header', file: '/views/components/header.html' },
-    { tag: 'custom-footer', file: '/views/components/footer.html' },
-    { tag: 'custom-sidebar', file: '/views/components/sidebar.html' },
+    
   ];
   
-  components.forEach(component => {
+  base.forEach(component => {
     class CustomComponent extends HTMLElement {
       constructor() {
         super();
